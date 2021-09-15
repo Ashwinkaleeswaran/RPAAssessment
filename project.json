@@ -1,19 +1,20 @@
 {
-  "name": "HCHB Process Automation",
-  "description": "Blank Library",
-  "main": "NewActivity.xaml",
+  "name": "HCHB Patient Record Process",
+  "description": "Blank Process",
+  "main": "Main.xaml",
   "dependencies": {
-    "HCHB.Process.Automation": "1.0.1",
-    "UiPath.Excel.Activities": "2.10.4",
-    "UiPath.Mail.Activities": "1.10.5",
-    "UiPath.System.Activities": "21.4.1",
-    "UiPath.UIAutomation.Activities": "21.4.4"
+    "HCHB.Process.Automation": "[1.0.8]",
+    "UiPath.Excel.Activities": "[2.10.4]",
+    "UiPath.Mail.Activities": "[1.10.5]",
+    "UiPath.System.Activities": "[21.4.1]",
+    "UiPath.UIAutomation.Activities": "[21.4.4]",
+    "UiPath.WebAPI.Activities": "[1.9.0-preview]"
   },
   "webServices": [],
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "21.4.4.0",
-  "projectVersion": "1.0.1",
+  "projectVersion": "1.0.0",
   "runtimeOptions": {
     "autoDispose": false,
     "isPausable": true,
@@ -29,13 +30,10 @@
   },
   "designOptions": {
     "projectProfile": "Developement",
-    "outputType": "Library",
+    "outputType": "Process",
     "libraryOptions": {
       "includeOriginalXaml": false,
-      "privateWorkflows": [
-        "ClickingConsoleManager.xaml",
-        "NewActivity.xaml"
-      ]
+      "privateWorkflows": []
     },
     "processOptions": {
       "ignoredFiles": []
@@ -44,6 +42,14 @@
     "modernBehavior": false
   },
   "expressionLanguage": "VisualBasic",
+  "entryPoints": [
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "51e7ed7d-6ac1-4fb6-ac13-946cf542db5c",
+      "input": [],
+      "output": []
+    }
+  ],
   "isTemplate": false,
   "templateProjectData": {},
   "publishData": {},

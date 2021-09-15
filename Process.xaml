@@ -1,0 +1,343 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Process" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="589,534" sap2010:WorkflowViewState.IdRef="Process_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:h="clr-namespace:HCHB_Process_Automation;assembly=HCHB Process Automation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="58">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>System.Collections.Specialized</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
+      <x:String>JsonConverter</x:String>
+      <x:String>HCHB_Process_Automation</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>Alphabet.Exception</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Net</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
+      <x:String>UiPath.Core.Activities.OCR.Engines</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+      <x:String>UiPath.OCR.Activities</x:String>
+      <x:String>UiPath.Core.Activities.Orchestrator</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.SMTP.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="66">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>DataTableToJson</AssemblyReference>
+      <AssemblyReference>HCHB Process Automation</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>GetXamlFileNameActivity</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Process" sap:VirtualizedContainerService.HintSize="468,469" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="ConfigTxt" />
+      <Variable x:TypeArguments="njl:JObject" Name="ConfigJObject" />
+      <Variable x:TypeArguments="x:String" Name="ApplicationURL" />
+      <Variable x:TypeArguments="x:String" Name="AssetName" />
+      <Variable x:TypeArguments="x:String" Name="FolderSelection" />
+      <Variable x:TypeArguments="x:String" Name="CitrixSelection" />
+      <Variable x:TypeArguments="x:String" Name="ConsoleSelection" />
+      <Variable x:TypeArguments="x:String" Name="ConsoleSelectionAnchor" />
+      <Variable x:TypeArguments="x:String" Name="FromDateFilter" />
+      <Variable x:TypeArguments="sd:DataTable" Name="PatientRecords" />
+      <Variable x:TypeArguments="x:String" Name="SheetName" />
+      <Variable x:TypeArguments="x:String" Name="MailBody" />
+      <Variable x:TypeArguments="x:String" Name="MailSubject" />
+      <Variable x:TypeArguments="x:String" Name="ToMailID" />
+      <Variable x:TypeArguments="x:String" Name="QueueName" />
+      <Variable x:TypeArguments="x:String" Name="Filename" />
+      <Variable x:TypeArguments="x:String" Name="FilePath" />
+      <Variable x:TypeArguments="x:String" Name="TypeFilter" />
+      <Variable x:TypeArguments="x:String" Name="StatusFilter" />
+      <Variable x:TypeArguments="x:String" Name="PatientsFilter" />
+      <Variable x:TypeArguments="x:String" Name="ToDateFilter" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="Initializing Config File" sap:VirtualizedContainerService.HintSize="426,271" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:ReadTextFile Content="[ConfigTxt]" DisplayName="Read Text File" FileName="Data\Config.txt" sap:VirtualizedContainerService.HintSize="384,79" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
+      <ui:DeserializeJson x:TypeArguments="njl:JObject" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="384,60" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_2" JsonObject="[ConfigJObject]" JsonString="[ConfigTxt]" />
+    </Sequence>
+    <Sequence DisplayName="Invoking HCHB Activities" sap:VirtualizedContainerService.HintSize="426,66" sap2010:WorkflowViewState.IdRef="Sequence_10">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="ss:SecureString" Name="LoginPassword" />
+        <Variable x:TypeArguments="x:String" Name="LoginUserName" />
+        <Variable x:TypeArguments="x:String" Name="PasswordString" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <If Condition="[ConfigJObject(&quot;ToDateFilter&quot;).ToString = &quot;CurrentDate&quot;]" sap:VirtualizedContainerService.HintSize="484,237" sap2010:WorkflowViewState.IdRef="If_3">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <If.Then>
+          <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">[ToDateFilter]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String">[System.DateTime.Now.ToString("MM/dd/yyyy")]</InArgument>
+            </Assign.Value>
+          </Assign>
+        </If.Then>
+      </If>
+      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
+        <ui:MultipleAssign.AssignOperations>
+          <scg:List x:TypeArguments="ui:AssignOperation" Capacity="32">
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_36">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[ApplicationURL]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">[ConfigJObject("ApplicationURL").ToString]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_37">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[AssetName]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">[ConfigJObject("AssetName").ToString]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_38">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[FolderSelection]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">[ConfigJObject("FolderSelection").ToString]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_39">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[CitrixSelection]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">[ConfigJObject("CitrixSelection").ToString]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_40">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[ConsoleSelection]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">[ConfigJObject("ConsoleSelection").ToString]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_41">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[ConsoleSelectionAnchor]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">[ConfigJObject("ConsoleSelectionAnchor").ToString]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_42">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[FromDateFilter]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">[ConfigJObject("FromDateFilter").ToString]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_43">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[PatientsFilter]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">[ConfigJObject("PatientsFilter").ToString]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_44">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[StatusFilter]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">[ConfigJObject("StatusFilter").ToString]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_45">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[TypeFilter]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">[ConfigJObject("TypeFilter").ToString]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_46">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[FilePath]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">[ConfigJObject("FilePath").ToString.Replace("\","/")]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_47">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[Filename]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">[ConfigJObject("Filename").ToString]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_48">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[QueueName]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">[ConfigJObject("QueueName").ToString]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_49">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[ToMailID]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">[ConfigJObject("ToMailID").ToString]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_50">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[MailSubject]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">[ConfigJObject("MailSubject").ToString]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_51">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[MailBody]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">[ConfigJObject("MailBody").ToString]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_52">
+              <ui:AssignOperation.To>
+                <OutArgument x:TypeArguments="x:String">[SheetName]</OutArgument>
+              </ui:AssignOperation.To>
+              <ui:AssignOperation.Value>
+                <InArgument x:TypeArguments="x:String">[ConfigJObject("SheetName").ToString]</InArgument>
+              </ui:AssignOperation.Value>
+            </ui:AssignOperation>
+          </scg:List>
+        </ui:MultipleAssign.AssignOperations>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:MultipleAssign>
+      <h:Launch ApplicationURL="[ApplicationURL]" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Launch_2" />
+      <h:AssetCredentials ApplicationAssetName="[AssetName]" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="AssetCredentials_2" LoginPassword="[LoginPassword]" LoginUserName="[LoginUserName]" PasswordString="[PasswordString]" />
+      <h:Login sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Login_2" LoginPassword="[LoginPassword]" LoginUserName="[LoginUserName]" PasswordString="[PasswordString]" />
+      <h:OpeningFolder FolderSelection="[FolderSelection]" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="OpeningFolder_2" />
+      <h:OpeningCitrix CitrixSelection="[CitrixSelection]" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="OpeningCitrix_2" />
+      <h:OpeningConsole ConsoleSelection="[ConsoleSelection]" ConsoleSelectionAnchor="[ConsoleSelectionAnchor]" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="OpeningConsole_2" />
+      <h:FilteringRecords FromDateFilter="[FromDateFilter]" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="FilteringRecords_2" PatientsFilter="[PatientsFilter]" StatusFilter="[StatusFilter]" ToDateFilter="[ToDateFilter]" TypeFilter="[TypeFilter]" />
+      <h:ClickPopup sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="ClickPopup_2" />
+      <h:LoadingPatientRecords sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="LoadingPatientRecords_2" />
+      <h:FileCreation Filename="[Filename]" Filepath="[FilePath]" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="FileCreation_2" />
+      <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[PatientRecords]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ReadRange_4" SheetName="[SheetName]" WorkbookPath="[FilePath+Filename]" />
+      <h:QueueUpload sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="QueueUpload_2" PatientRecordTable="[PatientRecords]" QueueName="[QueueName]" />
+      <h:FileDeletion FilePath="[FilePath]" Filename="[Filename]" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="FileDeletion_2" />
+      <h:CitrixLogout sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="CitrixLogout_2" />
+      <h:HCHBPortalLogout sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="HCHBPortalLogout_2" />
+    </Sequence>
+  </Sequence>
+</Activity>
